@@ -2,7 +2,7 @@ package com.luv2code.springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class HelloSpringApp {
+public class RandomFortuneApp {
 
     public static void main(String[] args) {
 
@@ -10,7 +10,7 @@ public class HelloSpringApp {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         // retrieve a bean from the spring container
-        Coach theCoach = context.getBean("myCoach", Coach.class);
+        SwimCoach theCoach = context.getBean("mySwimCoach", SwimCoach.class);
 
         //call methods on the bean
         System.out.println(theCoach.getDailyWorkout());
@@ -22,4 +22,5 @@ public class HelloSpringApp {
         context.close();
 
     }
+
 }
